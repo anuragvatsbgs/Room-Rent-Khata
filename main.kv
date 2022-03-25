@@ -1,0 +1,60 @@
+Screen:
+    name: "MainScreen"
+    FloatLayout:
+        
+            
+        
+        MDLabel:
+            text: "Room Rent Khata"
+            font_style: 'H4'
+            pos_hint : {'center_x':0.5 ,'center_y':0.9}
+            halign :"center"
+            
+        MDLabel:
+            text: "Powered by AnuSav"
+            font_style: 'H6'
+            pos_hint : {'center_x':0.5 ,'center_y':0.85}
+            halign :"center"    
+
+        MDTextField:
+            id:username_text_fied
+            hint_text: "Enter Username"
+            helper_text:"forget"
+            pos_hint : {'center_x':0.5 ,'center_y':0.7}
+            width: 500
+            size_hint: (0.7,0.1)
+        	helper_text: 'Required'
+        MDTextField:
+            id:username_text_fied
+            hint_text: "Password"
+            helper_text:"forget"
+            pos_hint : {'center_x':0.5 ,'center_y':0.6}
+            width: 500
+            size_hint: (0.7,0.1)
+        	helper_text: 'Required'
+
+
+                   
+        MDRectangleFlatButton:
+            text: "Convert"
+            pos_hint : {'center_x':0.5 ,'center_y':0.2}
+            text_color: 0, 0, 1, 1
+            md_bg_color: 1, 1, 0, 1
+            on_release: app.submit()
+            width: 500
+        
+        MDFloatingActionButton:
+            id: disabled_button
+            disabled: True
+            icon:'arrow-right'
+            md_bg_color:app.theme_cls.primary_color
+            pos_hint: {'center_x':0.9,'center_y':0.1}
+            user_font_size: '45sp'
+            on_press: root.manager.current = 'Conv'
+       
+       
+            
+            
+
+
+
